@@ -31,6 +31,10 @@ class Process implements Runnable {
     private int remainingTime; // Time left for the process to finish its execution
     private int priority; // Feature 1: Added process priority for tracking
 
+    private long creationTime;// Feature 3: Added creation time for tracking
+    private long lastEnqueueTime;
+    private long totalwaitingTime;;
+
     // Constructor to initialize the process with name, burst time, and time quantum
     public Process(String name, int burstTime, int timeQuantum) {
         this.name = name;
@@ -38,6 +42,10 @@ class Process implements Runnable {
         this.timeQuantum = timeQuantum;
         this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
         this.priority = 1 + new Random().nextInt(10); // Feature 1: generate a random priority between 1 and 10
+        // Feature 3: Record process creation time for waiting time calculation
+        this.creationTime = System.currentTimeMillis();
+        this.lastEnqueueTime = this.creationTime;
+        this.totalwaitingTime = 0;
     }
 
     // This method will be called when the thread for this process is started
@@ -145,6 +153,19 @@ class Process implements Runnable {
         return priority;
     }
 
+    // Feature 3
+    public void updateWaitingTime() {
+        this.totalwaitingTime += System.currentTimeMillis() - this.lastEnqueueTime;
+    }
+
+    public long getTotalWaitingTime() {
+        return totalwaitingTime;
+    }
+
+    public void Enqueue() {
+        this.lastEnqueueTime = System.currentTimeMillis();
+    }
+
     // Check if the process has finished (i.e., no remaining time)
     public boolean isFinished() {
         return remainingTime <= 0;
@@ -174,6 +195,8 @@ public class SchedulerSimulation {
 
         // Map to associate each thread with its respective process object
         Map<Thread, Process> processMap = new HashMap<>();
+        // Feature 3
+        LinkedList<Process> allProcesses = new LinkedList<>();
 
         // Print simulation header with elegant formatting
         System.out.println("\n" + Colors.BOLD + Colors.BRIGHT_CYAN +
@@ -210,7 +233,8 @@ public class SchedulerSimulation {
             // Create a new process object with a unique name, burst time, and the defined
             // time quantum
             Process process = new Process("P" + i, burstTime, timeQuantum);
-
+            // Feature 3
+            allProcesses.add(process);
             // Add the process to the ready queue and the map
             addProcessToQueue(process, processQueue, processMap);
         }
@@ -248,6 +272,9 @@ public class SchedulerSimulation {
             }
             System.out.println(Colors.BRIGHT_WHITE + "]" + Colors.RESET);
             System.out.println(Colors.BOLD + Colors.MAGENTA + "└" + "─".repeat(79) + Colors.RESET + "\n");
+            // Feature 3
+            Process currentProcess = processMap.get(currentThread);
+            currentProcess.updateWaitingTime();
 
             // Start the thread, which will run the process for one time quantum
             currentThread.start();
@@ -294,6 +321,15 @@ public class SchedulerSimulation {
 
         System.out.println("Total context switches:" + contextSwitchCount); // Feature 2: Print the total number of
                                                                             // context switches
+        // Feature 3
+        // Feature 3: Display waiting time and turnaround time for each process.
+        System.out.println("\nWaiting Time Summary");
+        for (Process process : allProcesses) {
+            long waitingTime = process.getTotalWaitingTime();
+            long turnaroundTime = waitingTime + process.getBurstTime();
+            System.out.println(process.getName() + ": Burst Time = " + process.getBurstTime() + ", Waiting Time = "
+                    + waitingTime + ", Turnaround Time = " + turnaroundTime);
+        }
 
     }
 
@@ -306,6 +342,7 @@ public class SchedulerSimulation {
 
         // Add the thread to the ready queue
         processQueue.add(thread);
+        process.Enqueue(); // Feature 3
 
         // Map the thread to the process, so we can track the process associated with
         // each thread
