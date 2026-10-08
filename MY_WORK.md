@@ -237,7 +237,11 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I learned that multithreading allows a program to do different tasks.
+In this project, I used the Process class with Runnable. 
+I learned that Thread.start() starts a thread and Thread.sleep() pauses it for some time.
+I also learned that Thread.join() makes the main thread wait for another thread to finish.
+The most interesting thing was seeing the processes take turns using the CPU.]
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -245,7 +249,11 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[The most difficult part was calculating the waiting time.
+A process can wait in the queue more than once. 
+I needed to understand when the process starts waiting and when it starts running again. 
+I also needed to show the result in the summary. 
+I worked on this part by reading the code and testing the program.]
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -253,7 +261,11 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I solved the problems by reading the code carefully.
+I tried to understand each method before changing it.
+After making changes, I ran the program and checked the output. 
+I also checked if the new features worked as expected. 
+This helped me understand the project better.]
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -261,7 +273,11 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[Multithreading is used in many programs.
+For example, a music player can play music while the user uses the application.
+Operating systems also manage many tasks at the same time. 
+The CPU gives time to different tasks so they can make progress.
+This project helped me understand how the CPU can share its time between processes.]
 
 ### Optional: What would you like to learn more about?
 
@@ -275,6 +291,9 @@
 
 [Any comments? Was it helpful? Too easy or hard? Suggestions?]
 
+I want to learn more about CPU scheduling and other scheduling algorithms. 
+I feel more confident about threads after completing this project. 
+However, I still need more practice with waiting time and thread synchronization.
 ---
 
 # Part C: Technical Answers (0.5 mark)
