@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | [Sahar Nasser Alkhudhyr] |
+| **Student ID** | [446052174] |
+| **University Email** | [446052174]@std.psau.edu.sa |
+| **GitHub Username** | [Sahar1322] |
+| **Repository Link** | [https://github.com/Sahar1322/OS-Assignment1-Sahar-Nasser/tree/main] |
  
 ---
 
@@ -129,81 +129,106 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [October 6, 2026, 2:00 PM]
+**What I did**:  I started the assignment and read the instructions
 
 **Details**:
+I read the assignment requirements carefully
+I tried to understand the main tasks of the project
+I reviewed the required features and deliverables
+I planned how to start working on the assignment
 
-**Challenges**:
+**Challenges**:I needed time to understand all the requirements and  I found it difficult to understand how the scheduler works
 
-**Solution**:
+**Solution**: I read the instructions again and divided the assignment into smaller tasks
 
-**Time spent**:
+**Time spent**: 4 hours
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 6, 2026, 10:00 PM]
+**What I did**: I created my GitHub account and connected it to Visual Studio Code
 
 **Details**:
 
-**Challenges**:
+I opened Visual Studio Code and learned how to connect it to my GitHub account
+I worked on setting up my project repository on GitHub
+I checked the connection and learned how GitHub can help me save my work and keep track of my changes
 
-**Solution**:
+**Challenges**:I had some difficulty understanding how to connect GitHub to Visual Studio Code and set up my repository
 
-**Time spent**:
+
+**Solution**: I followed the setup steps and checked my GitHub account and Visual Studio Code to make sure the connection was working
+
+**Time spent**: 3 hours
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 7, 2026, 10:59 PM]
+**What I did**: I worked on Feature 1 Process Priority
 
 **Details**:
 
-**Challenges**:
+I checked how priority is stored for each process in the program
+I worked on adding a random priority value from 1 to 10 for each process
+I checked how the priority appears when the ready queue is displayed
 
-**Solution**:
+**Challenges**: I was confused about how process priority works with Round-Robin scheduling
 
-**Time spent**:
+**Solution**: I reviewed the assignment instructions and checked the code to understand how the priority value is stored and displayed
+
+**Time spent**: 2 hours
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - [October 8, 2026, 1:21 AM]
+**What I did**:I worked on Feature 2 Context Switch Counter
 
 **Details**:
+ I read the instructions to understand what a context switch means in the program
+ I worked on adding a counter to count the context switches during execution
+ I checked where the counter should increase when a new process starts running
+ I checked the program output to make sure the total number of context switches was displayed at the end
 
-**Challenges**:
+**Challenges**: I was confused about when the counter should increase during process execution
 
-**Solution**:
+**Solution**:I reviewed the scheduler code and checked the output to understand how the counter works
 
-**Time spent**:
+**Time spent**: 1:30 hours
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 - [October 9, 2026, 12:42 AM]
+**What I did**:I worked on Feature 3 Waiting Time Tracking
 
 **Details**:
 
-**Challenges**:
+ I read the instructions about calculating the waiting time for each process
+ I worked on tracking the time that each process spends waiting
+ I checked how the program calculates the turnaround time using waiting time 
 
-**Solution**:
+**Challenges**:I found it difficult to understand the difference between waiting time and turnaround time
 
-**Time spent**:
+**Solution**:I reviewed the lecture slides and explanation, and I understood how to calculate waiting time and turnaround time
+
+**Time spent**: 3 hours
 
 ---
 
-### Entry 6 - [Optional - Date and Time]
-**What I did**:
+### Entry 6 - [Optional - October 9, 2026, 12:50 AM]
+**What I did**:I tested my program to check if the features were working correctly
 
 **Details**:
 
-**Challenges**:
+ I checked the process priorities in the output
+ I checked the total number of context switches
+ I reviewed the final table to make sure the results were displayed
 
-**Solution**:
+**Challenges**: I was not sure if all the features were working correctly
 
-**Time spent**:
+**Solution**: I ran the program and checked the output to see if the results appeared correctly
+
+**Time spent**: 30 minutes
 
 ---
 
@@ -211,13 +236,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [4 days]
 
-**Most challenging part**:
+**Most challenging part**:Understanding how waiting time and context switches work
 
-**Most interesting learning**:
+**Most interesting learning**: I learned how processes take turns using the CPU
 
-**What I would do differently next time**:
+**What I would do differently next time**: I would make a simple plan before coding so I know what to do first and can finish the assignment more easily
 
 ---
 
