@@ -33,7 +33,7 @@
 | **Student ID** | [446052174] |
 | **University Email** | [446052174]@std.psau.edu.sa |
 | **GitHub Username** | [Sahar1322] |
-| **Repository Link** | [https://github.com/Sahar1322/OS-Assignment1-Sahar-Nasser.git] | 
+| **Repository Link** | [https://github.com/Sahar1322/OS-Assignment1-Sahar-Nasser/tree/main] | 
  
 ---
 
