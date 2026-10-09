@@ -312,7 +312,11 @@ However, I still need more practice with waiting time and thread synchronization
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[A process is a program that is running.
+A thread is a part of a process that does work. 
+Different processes usually have separate memory, but threads in the same process can share memory. 
+In this project, Process represents the work, and a Java Thread runs it using new Thread(process).
+This helped me understand the difference between a process and a thread.]
 
 ## Question 2: Ready Queue Behavior
 
@@ -324,15 +328,22 @@ However, I still need more practice with waiting time and thread synchronization
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[A thread is moved back to the ready queue when it needs more time to finish its work. 
+In this program, the process goes back to the ready queue after using its time quantum if it is not finished.]
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+P2 executing quantum [5000ms]
+P2 completed quantum 5000ms │ Overall progress: 45%
+Remaining time: 6076ms
+P2 yields CPU for context switch
+P2 added to ready queue │ Burst time: 11076ms │ Priority: 8
 ```
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+
+P2 used 5000ms, but it still had 6076ms left. So, 
+P2 went back to the ready queue and waited for another turn.
 
 ## Question 3: Thread Lifecycle
 
@@ -342,15 +353,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: [P1 is created using new Thread(process)]
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: [ P1 is ready to run when start() is called]
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: [ P1 starts working inside the run() method]
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: [The thread can wait using Thread.sleep(). The main thread can wait using join()]
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: [P1 finishes when its run() method ends]
 
 ## Question 4: Real-World Applications
 
@@ -360,32 +371,45 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): [Operating System]
 
 **Description**:
-[Describe the real-world scenario.]
+[The operating system runs many programs at the same time. 
+For example, a user may open a web browser, listen to music, and download a file. 
+These programs need to use the CPU to do their work. 
+With Round-Robin scheduling, each program gets a small amount of CPU time.
+If the program does not finish, it goes to the end of the ready queue and waits for its next turn]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[Round-Robin works well for this example because every program gets a chance to use the CPU.
+One program cannot keep the CPU for a long time while the other programs wait. 
+This makes CPU time more fair and helps the computer respond to different programs. 
+It is also easy to understand because each program gets its turn in order.]
 
-### Example 2: [Name of application/scenario]
+### Example 2: [Online Game]
 
 **Description**:
-[Describe the real-world scenario or application.]
+[An online game has many tasks that need to work, 
+such as updating the game, moving players, checking player actions, and playing sounds. 
+These tasks need CPU time to complete their work.
+If we use Round-Robin scheduling, each task gets a turn to run for a short time.
+If a task does not finish, it waits until it gets another turn]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[Round-Robin is useful because it gives each task a chance to run. 
+This helps the game do many tasks without making one task wait for too long. 
+It also makes the game respond faster when the player does different actions]
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1.Threads help processes run in the program
+2.Round-Robin gives each process a turn to use the CPU
+3.The ready queue holds processes waiting for their turn
 
 **Concepts I need to study more:**
-1.
-2.
+1.Thread states and how they change
+2.How the time quantum affects the performance of Round-Robin
 
 ---
 
