@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | [Sahar Nasser Alkhudhyr] |
+| **Student ID** | [446052174] |
+| **University Email** | [446052174]@std.psau.edu.sa |
+| **GitHub Username** | [Sahar1322] |
+| **Repository Link** | [https://github.com/Sahar1322/OS-Assignment1-Sahar-Nasser/tree/main] | 
  
 ---
 
@@ -129,81 +129,106 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
-**What I did**:
+### Entry 1 - [October 6, 2026, 2:00 PM]
+**What I did**:  I started the assignment and read the instructions
 
 **Details**:
+I read the assignment requirements carefully
+I tried to understand the main tasks of the project
+I reviewed the required features and deliverables
+I planned how to start working on the assignment
 
-**Challenges**:
+**Challenges**:I needed time to understand all the requirements and  I found it difficult to understand how the scheduler works
 
-**Solution**:
+**Solution**: I read the instructions again and divided the assignment into smaller tasks
 
-**Time spent**:
+**Time spent**: 4 hours
 
 ---
 
-### Entry 2 - [Date and Time]
-**What I did**:
+### Entry 2 - [October 6, 2026, 10:00 PM]
+**What I did**: I created my GitHub account and connected it to Visual Studio Code
 
 **Details**:
 
-**Challenges**:
+I opened Visual Studio Code and learned how to connect it to my GitHub account
+I worked on setting up my project repository on GitHub
+I checked the connection and learned how GitHub can help me save my work and keep track of my changes
 
-**Solution**:
+**Challenges**:I had some difficulty understanding how to connect GitHub to Visual Studio Code and set up my repository
 
-**Time spent**:
+
+**Solution**: I followed the setup steps and checked my GitHub account and Visual Studio Code to make sure the connection was working
+
+**Time spent**: 3 hours
 
 ---
 
-### Entry 3 - [Date and Time]
-**What I did**:
+### Entry 3 - [October 7, 2026, 10:59 PM]
+**What I did**: I worked on Feature 1 Process Priority
 
 **Details**:
 
-**Challenges**:
+I checked how priority is stored for each process in the program
+I worked on adding a random priority value from 1 to 10 for each process
+I checked how the priority appears when the ready queue is displayed
 
-**Solution**:
+**Challenges**: I was confused about how process priority works with Round-Robin scheduling
 
-**Time spent**:
+**Solution**: I reviewed the assignment instructions and checked the code to understand how the priority value is stored and displayed
+
+**Time spent**: 2 hours
 
 ---
 
-### Entry 4 - [Date and Time]
-**What I did**:
+### Entry 4 - [October 8, 2026, 1:21 AM]
+**What I did**:I worked on Feature 2 Context Switch Counter
 
 **Details**:
+ I read the instructions to understand what a context switch means in the program
+ I worked on adding a counter to count the context switches during execution
+ I checked where the counter should increase when a new process starts running
+ I checked the program output to make sure the total number of context switches was displayed at the end
 
-**Challenges**:
+**Challenges**: I was confused about when the counter should increase during process execution
 
-**Solution**:
+**Solution**:I reviewed the scheduler code and checked the output to understand how the counter works
 
-**Time spent**:
+**Time spent**: 1:30 hours
 
 ---
 
-### Entry 5 - [Date and Time]
-**What I did**:
+### Entry 5 - [October 9, 2026, 12:42 AM]
+**What I did**:I worked on Feature 3 Waiting Time Tracking
 
 **Details**:
 
-**Challenges**:
+ I read the instructions about calculating the waiting time for each process
+ I worked on tracking the time that each process spends waiting
+ I checked how the program calculates the turnaround time using waiting time 
 
-**Solution**:
+**Challenges**:I found it difficult to understand the difference between waiting time and turnaround time
 
-**Time spent**:
+**Solution**:I reviewed the lecture slides and explanation, and I understood how to calculate waiting time and turnaround time
+
+**Time spent**: 3 hours
 
 ---
 
-### Entry 6 - [Optional - Date and Time]
-**What I did**:
+### Entry 6 - [Optional - October 9, 2026, 12:50 AM]
+**What I did**:I tested my program to check if the features were working correctly
 
 **Details**:
 
-**Challenges**:
+ I checked the process priorities in the output
+ I checked the total number of context switches
+ I reviewed the final table to make sure the results were displayed
 
-**Solution**:
+**Challenges**: I was not sure if all the features were working correctly
 
-**Time spent**:
+**Solution**: I ran the program and checked the output to see if the results appeared correctly
+
+**Time spent**: 30 minutes
 
 ---
 
@@ -211,13 +236,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [4 days]
 
-**Most challenging part**:
+**Most challenging part**:Understanding how waiting time and context switches work
 
-**Most interesting learning**:
+**Most interesting learning**: I learned how processes take turns using the CPU
 
-**What I would do differently next time**:
+**What I would do differently next time**: I would make a simple plan before coding so I know what to do first and can finish the assignment more easily
 
 ---
 
@@ -237,7 +262,11 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I learned that multithreading allows a program to do different tasks.
+In this project, I used the Process class with Runnable. 
+I learned that Thread.start() starts a thread and Thread.sleep() pauses it for some time.
+I also learned that Thread.join() makes the main thread wait for another thread to finish.
+The most interesting thing was seeing the processes take turns using the CPU.]
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -245,7 +274,11 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[The most difficult part was calculating the waiting time.
+A process can wait in the queue more than once. 
+I needed to understand when the process starts waiting and when it starts running again. 
+I also needed to show the result in the summary. 
+I worked on this part by reading the code and testing the program.]
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -253,7 +286,11 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[I solved the problems by reading the code carefully.
+I tried to understand each method before changing it.
+After making changes, I ran the program and checked the output. 
+I also checked if the new features worked as expected. 
+This helped me understand the project better.]
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -261,7 +298,11 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+[Multithreading is used in many programs.
+For example, a music player can play music while the user uses the application.
+Operating systems also manage many tasks at the same time. 
+The CPU gives time to different tasks so they can make progress.
+This project helped me understand how the CPU can share its time between processes.]
 
 ### Optional: What would you like to learn more about?
 
@@ -275,6 +316,9 @@
 
 [Any comments? Was it helpful? Too easy or hard? Suggestions?]
 
+I want to learn more about CPU scheduling and other scheduling algorithms. 
+I feel more confident about threads after completing this project. 
+However, I still need more practice with waiting time and thread synchronization.
 ---
 
 # Part C: Technical Answers (0.5 mark)
@@ -293,7 +337,11 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[A process is a program that is running.
+A thread is a part of a process that does work. 
+Different processes usually have separate memory, but threads in the same process can share memory. 
+In this project, Process represents the work, and a Java Thread runs it using new Thread(process).
+This helped me understand the difference between a process and a thread.]
 
 ## Question 2: Ready Queue Behavior
 
@@ -305,15 +353,22 @@
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+[A thread is moved back to the ready queue when it needs more time to finish its work. 
+In this program, the process goes back to the ready queue after using its time quantum if it is not finished.]
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+P2 executing quantum [5000ms]
+P2 completed quantum 5000ms │ Overall progress: 45%
+Remaining time: 6076ms
+P2 yields CPU for context switch
+P2 added to ready queue │ Burst time: 11076ms │ Priority: 8
 ```
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+
+P2 used 5000ms, but it still had 6076ms left. So, 
+P2 went back to the ready queue and waited for another turn.
 
 ## Question 3: Thread Lifecycle
 
@@ -323,15 +378,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: [P1 is created using new Thread(process)]
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: [ P1 is ready to run when start() is called]
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: [ P1 starts working inside the run() method]
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: [The thread can wait using Thread.sleep(). The main thread can wait using join()]
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: [P1 finishes when its run() method ends]
 
 ## Question 4: Real-World Applications
 
@@ -341,32 +396,45 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): [Operating System]
 
 **Description**:
-[Describe the real-world scenario.]
+[The operating system runs many programs at the same time. 
+For example, a user may open a web browser, listen to music, and download a file. 
+These programs need to use the CPU to do their work. 
+With Round-Robin scheduling, each program gets a small amount of CPU time.
+If the program does not finish, it goes to the end of the ready queue and waits for its next turn]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[Round-Robin works well for this example because every program gets a chance to use the CPU.
+One program cannot keep the CPU for a long time while the other programs wait. 
+This makes CPU time more fair and helps the computer respond to different programs. 
+It is also easy to understand because each program gets its turn in order.]
 
-### Example 2: [Name of application/scenario]
+### Example 2: [Online Game]
 
 **Description**:
-[Describe the real-world scenario or application.]
+[An online game has many tasks that need to work, 
+such as updating the game, moving players, checking player actions, and playing sounds. 
+These tasks need CPU time to complete their work.
+If we use Round-Robin scheduling, each task gets a turn to run for a short time.
+If a task does not finish, it waits until it gets another turn]
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+[Round-Robin is useful because it gives each task a chance to run. 
+This helps the game do many tasks without making one task wait for too long. 
+It also makes the game respond faster when the player does different actions]
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1.Threads help processes run in the program
+2.Round-Robin gives each process a turn to use the CPU
+3.The ready queue holds processes waiting for their turn
 
 **Concepts I need to study more:**
-1.
-2.
+1.Thread states and how they change
+2.How the time quantum affects the performance of Round-Robin
 
 ---
 
