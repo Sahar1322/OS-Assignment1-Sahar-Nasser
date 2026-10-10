@@ -33,7 +33,7 @@ class Process implements Runnable {
 
     private long creationTime;// Feature 3: Added creation time for tracking
     private long lastEnqueueTime;
-    private long totalwaitingTime;;
+    private long waitingTime;;
 
     // Constructor to initialize the process with name, burst time, and time quantum
     public Process(String name, int burstTime, int timeQuantum) {
@@ -45,7 +45,7 @@ class Process implements Runnable {
         // Feature 3: Record process creation time for waiting time calculation
         this.creationTime = System.currentTimeMillis();
         this.lastEnqueueTime = this.creationTime;
-        this.totalwaitingTime = 0;
+        this.waitingTime = 0;
     }
 
     // This method will be called when the thread for this process is started
@@ -155,11 +155,11 @@ class Process implements Runnable {
 
     // Feature 3
     public void updateWaitingTime() {
-        this.totalwaitingTime += System.currentTimeMillis() - this.lastEnqueueTime;
+        this.waitingTime = System.currentTimeMillis() - this.lastEnqueueTime;
     }
 
-    public long getTotalWaitingTime() {
-        return totalwaitingTime;
+    public long getWaitingTime() {
+        return waitingTime;
     }
 
     public void Enqueue() {
@@ -325,7 +325,7 @@ public class SchedulerSimulation {
         // Feature 3: Display waiting time and turnaround time for each process.
         System.out.println("\nWaiting Time Summary");
         for (Process process : allProcesses) {
-            long waitingTime = process.getTotalWaitingTime();
+            long waitingTime = process.getWaitingTime();
             long turnaroundTime = waitingTime + process.getBurstTime();
             System.out.println(process.getName() + ": Burst Time = " + process.getBurstTime() + ", Waiting Time = "
                     + waitingTime + ", Turnaround Time = " + turnaroundTime);
